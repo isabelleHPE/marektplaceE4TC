@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "${GRAFANA_PORT}:3000"
+    volumes:
+      - grafana-vol:/var/lib/grafana
+    network_mode: bridge
+    restart: "${RESTART}"
+
+volumes:
+  grafana-vol:
+    driver: local
