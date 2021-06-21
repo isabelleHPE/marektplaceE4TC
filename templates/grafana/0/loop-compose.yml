@@ -1,0 +1,17 @@
+.catalog:
+  name: Grafana
+  version: latest
+  uuid: grafana-0
+  questions:
+  - variable: GRAFANA_PORT
+    description: 'Grafana exposed port'
+    label: 'Port:'
+    required: true
+    default: 3000
+    type: int
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string
